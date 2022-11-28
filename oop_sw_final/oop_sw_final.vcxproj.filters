@@ -52,6 +52,24 @@
     <Filter Include="소스 파일\exmaple">
       <UniqueIdentifier>{29247e8f-883b-4319-968b-72859b8313df}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\exmaple\chapter_1">
+      <UniqueIdentifier>{e6be6cc4-aa51-4644-9b0e-06d0e2962e2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\exmaple\chapter_2">
+      <UniqueIdentifier>{b5407cf9-41c4-4691-ad5f-3b911cc2d856}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\exmaple\chapter_3">
+      <UniqueIdentifier>{e1c45a4e-f0d6-44db-ac67-0cb6e3af95e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\exmaple\chapter_4">
+      <UniqueIdentifier>{e5a4f7b0-9748-491b-8fbe-08681c602d2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\exmaple\chapter_5">
+      <UniqueIdentifier>{b7d202d3-f60b-48f1-9148-23025d72fc3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\exmaple\chapter_6">
+      <UniqueIdentifier>{6d0cf6df-7f0a-4b9f-92a8-9527a368eff7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="singleton.cpp">
@@ -168,18 +186,6 @@
     <ClCompile Include="stl_example.cpp">
       <Filter>소스 파일\STL</Filter>
     </ClCompile>
-    <ClCompile Include="ex1.cpp">
-      <Filter>소스 파일\exmaple</Filter>
-    </ClCompile>
-    <ClCompile Include="ex2.cpp">
-      <Filter>소스 파일\exmaple</Filter>
-    </ClCompile>
-    <ClCompile Include="ex3.cpp">
-      <Filter>소스 파일\exmaple</Filter>
-    </ClCompile>
-    <ClCompile Include="ex4.cpp">
-      <Filter>소스 파일\exmaple</Filter>
-    </ClCompile>
     <ClCompile Include="template_ex1.cpp">
       <Filter>소스 파일\template</Filter>
     </ClCompile>
@@ -203,6 +209,102 @@
     </ClCompile>
     <ClCompile Include="set_map.cpp">
       <Filter>소스 파일\template</Filter>
+    </ClCompile>
+    <ClCompile Include="1_1.cpp">
+      <Filter>소스 파일\exmaple\chapter_1</Filter>
+    </ClCompile>
+    <ClCompile Include="1_2.cpp">
+      <Filter>소스 파일\exmaple\chapter_1</Filter>
+    </ClCompile>
+    <ClCompile Include="1_3.cpp">
+      <Filter>소스 파일\exmaple\chapter_1</Filter>
+    </ClCompile>
+    <ClCompile Include="1_4.cpp">
+      <Filter>소스 파일\exmaple\chapter_1</Filter>
+    </ClCompile>
+    <ClCompile Include="1_5.cpp">
+      <Filter>소스 파일\exmaple\chapter_1</Filter>
+    </ClCompile>
+    <ClCompile Include="2_1.cpp">
+      <Filter>소스 파일\exmaple\chapter_2</Filter>
+    </ClCompile>
+    <ClCompile Include="copy_constructor_checking.cpp">
+      <Filter>소스 파일\exmaple\chapter_2</Filter>
+    </ClCompile>
+    <ClCompile Include="2_2.cpp">
+      <Filter>소스 파일\exmaple\chapter_2</Filter>
+    </ClCompile>
+    <ClCompile Include="2_3.cpp">
+      <Filter>소스 파일\exmaple\chapter_2</Filter>
+    </ClCompile>
+    <ClCompile Include="2_4.cpp">
+      <Filter>소스 파일\exmaple\chapter_2</Filter>
+    </ClCompile>
+    <ClCompile Include="2_5.cpp">
+      <Filter>소스 파일\exmaple\chapter_2</Filter>
+    </ClCompile>
+    <ClCompile Include="3_1.cpp">
+      <Filter>소스 파일\exmaple\chapter_3</Filter>
+    </ClCompile>
+    <ClCompile Include="3_2.cpp">
+      <Filter>소스 파일\exmaple\chapter_3</Filter>
+    </ClCompile>
+    <ClCompile Include="3_3.cpp">
+      <Filter>소스 파일\exmaple\chapter_3</Filter>
+    </ClCompile>
+    <ClCompile Include="3_4.cpp">
+      <Filter>소스 파일\exmaple\chapter_3</Filter>
+    </ClCompile>
+    <ClCompile Include="3_5.cpp">
+      <Filter>소스 파일\exmaple\chapter_3</Filter>
+    </ClCompile>
+    <ClCompile Include="3_6.cpp">
+      <Filter>소스 파일\exmaple\chapter_3</Filter>
+    </ClCompile>
+    <ClCompile Include="4_1.cpp">
+      <Filter>소스 파일\exmaple\chapter_4</Filter>
+    </ClCompile>
+    <ClCompile Include="4_2.cpp">
+      <Filter>소스 파일\exmaple\chapter_4</Filter>
+    </ClCompile>
+    <ClCompile Include="4_3.cpp">
+      <Filter>소스 파일\exmaple\chapter_4</Filter>
+    </ClCompile>
+    <ClCompile Include="4_4.cpp">
+      <Filter>소스 파일\exmaple\chapter_4</Filter>
+    </ClCompile>
+    <ClCompile Include="4_5.cpp">
+      <Filter>소스 파일\exmaple\chapter_4</Filter>
+    </ClCompile>
+    <ClCompile Include="4_6_7.cpp">
+      <Filter>소스 파일\exmaple\chapter_4</Filter>
+    </ClCompile>
+    <ClCompile Include="5_1.cpp">
+      <Filter>소스 파일\exmaple\chapter_5</Filter>
+    </ClCompile>
+    <ClCompile Include="5_2.cpp">
+      <Filter>소스 파일\exmaple\chapter_5</Filter>
+    </ClCompile>
+    <ClCompile Include="5_3.cpp">
+      <Filter>소스 파일\exmaple\chapter_5</Filter>
+    </ClCompile>
+    <ClCompile Include="5_4.cpp">
+      <Filter>소스 파일\exmaple\chapter_5</Filter>
+    </ClCompile>
+    <ClCompile Include="5_5.cpp">
+      <Filter>소스 파일\exmaple\chapter_5</Filter>
+    </ClCompile>
+    <ClCompile Include="6_1.cpp">
+      <Filter>소스 파일\exmaple\chapter_6</Filter>
+    </ClCompile>
+    <ClCompile Include="6_2.cpp">
+      <Filter>소스 파일\exmaple\chapter_6</Filter>
+    </ClCompile>
+    <ClCompile Include="6_3.cpp">
+      <Filter>소스 파일\exmaple\chapter_6</Filter>
+    </ClCompile>
+    <ClCompile Include="6_4.cpp">
+      <Filter>소스 파일\exmaple\chapter_6</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

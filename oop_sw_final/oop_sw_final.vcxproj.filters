@@ -70,6 +70,12 @@
     <Filter Include="소스 파일\exmaple\chapter_6">
       <UniqueIdentifier>{6d0cf6df-7f0a-4b9f-92a8-9527a368eff7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\exmaple\chapter_7">
+      <UniqueIdentifier>{7170c0e2-4656-496b-afdd-84a77d1ec157}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\exmaple\chapter_8">
+      <UniqueIdentifier>{7b02bab7-6868-46fd-9a65-c5934703f503}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="singleton.cpp">
@@ -305,6 +311,51 @@
     </ClCompile>
     <ClCompile Include="6_4.cpp">
       <Filter>소스 파일\exmaple\chapter_6</Filter>
+    </ClCompile>
+    <ClCompile Include="6_5.cpp">
+      <Filter>소스 파일\exmaple\chapter_6</Filter>
+    </ClCompile>
+    <ClCompile Include="7_6.cpp">
+      <Filter>소스 파일\exmaple\chapter_7</Filter>
+    </ClCompile>
+    <ClCompile Include="7_1.cpp">
+      <Filter>소스 파일\exmaple\chapter_7</Filter>
+    </ClCompile>
+    <ClCompile Include="7_2.cpp">
+      <Filter>소스 파일\exmaple\chapter_7</Filter>
+    </ClCompile>
+    <ClCompile Include="7_3.cpp">
+      <Filter>소스 파일\exmaple\chapter_7</Filter>
+    </ClCompile>
+    <ClCompile Include="7_4.cpp">
+      <Filter>소스 파일\exmaple\chapter_7</Filter>
+    </ClCompile>
+    <ClCompile Include="7_5.cpp">
+      <Filter>소스 파일\exmaple\chapter_7</Filter>
+    </ClCompile>
+    <ClCompile Include="8_1.cpp">
+      <Filter>소스 파일\exmaple\chapter_8</Filter>
+    </ClCompile>
+    <ClCompile Include="8_2.cpp">
+      <Filter>소스 파일\exmaple\chapter_8</Filter>
+    </ClCompile>
+    <ClCompile Include="8_3.cpp">
+      <Filter>소스 파일\exmaple\chapter_8</Filter>
+    </ClCompile>
+    <ClCompile Include="8_4.cpp">
+      <Filter>소스 파일\exmaple\chapter_8</Filter>
+    </ClCompile>
+    <ClCompile Include="8_5.cpp">
+      <Filter>소스 파일\exmaple\chapter_8</Filter>
+    </ClCompile>
+    <ClCompile Include="8_6.cpp">
+      <Filter>소스 파일\exmaple\chapter_8</Filter>
+    </ClCompile>
+    <ClCompile Include="8_7.cpp">
+      <Filter>소스 파일\exmaple\chapter_8</Filter>
+    </ClCompile>
+    <ClCompile Include="8_4_set.cpp">
+      <Filter>소스 파일\exmaple\chapter_8</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

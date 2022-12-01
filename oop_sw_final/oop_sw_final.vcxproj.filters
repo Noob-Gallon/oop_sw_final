@@ -264,9 +264,6 @@
     <ClCompile Include="3_5.cpp">
       <Filter>소스 파일\exmaple\chapter_3</Filter>
     </ClCompile>
-    <ClCompile Include="3_6.cpp">
-      <Filter>소스 파일\exmaple\chapter_3</Filter>
-    </ClCompile>
     <ClCompile Include="4_1.cpp">
       <Filter>소스 파일\exmaple\chapter_4</Filter>
     </ClCompile>
@@ -356,6 +353,9 @@
     </ClCompile>
     <ClCompile Include="8_4_set.cpp">
       <Filter>소스 파일\exmaple\chapter_8</Filter>
+    </ClCompile>
+    <ClCompile Include="6_6_7.cpp">
+      <Filter>소스 파일\exmaple\chapter_6</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

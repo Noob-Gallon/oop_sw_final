@@ -3,6 +3,7 @@
 
 using namespace std;
 
+// MyClass에 상속할 부모 클래스 Student 정의
 class Student {
 private:
 	string name;
@@ -10,6 +11,7 @@ private:
 public:
 	Student(string _name = "") : name(_name) {
 	}
+	// getter와 setter 정의
 	string getName() {
 		return this->name;
 	}
@@ -25,6 +27,7 @@ private:
 	int size; // 생성자로 학급의 수를 받아온다.
 
 public:
+	// 생성자로 입력받은 수만큼 학생의 instance를 동적할당 받은 배열에 추가.
 	MyClass(string _className, int _size = 0) : className(_className), size(_size) {
 		p = new Student[_size];
 
@@ -40,6 +43,7 @@ public:
 			p[i] = stu;
 		}
 	}
+	// 소멸자에서 동적할당된 배열을 해제
 	~MyClass() {
 		if (p != nullptr) {
 			if (size > 1) {

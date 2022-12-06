@@ -12,16 +12,41 @@ private:
 	string tel;
 
 public:
-	// 만약 default value를 설정해주지 않으면,
-	// 적절한 기본 생성자가 없다고 나옴...
 	Student(string _name, string _address, string _ID, string _tel);
-	//Student(string _name = "홍길동", string _address ="", string _ID = "00000000", string _tel = "");
+	// Student(string _name = "홍길동", string _address ="", string _ID = "00000000", string _tel = "");
 	Student();
 	void showInfo();
+	string getName() {
+		return name;
+	}
+	string getAddress() {
+		return address;
+	}
+	string getID() {
+		return ID;
+	}
+	string getTel() {
+		return tel;
+	}
+	void setName(string name) {
+		this->name = name;
+	}
+	void setAddress(string address) {
+		this->address = address;
+	}
+	void setID(string ID) {
+		this->ID = ID;
+	}
+	void setTel(string tel) {
+		this->tel = tel;
+	}
 };
 
 class Menu {
 private:
+	// Student 클래스를 저장하기 위해 map을 선언.
+	// map은 key를 string으로 하며, 학생의 이름을 key로 지정한다.
+	// value로는 Student class의 객체를 저장한다.
 	map<string, Student> list;
 	bool exitCheck = false;
 
@@ -40,10 +65,13 @@ public:
 	bool checkExitBool();
 };
 
+// Main 함수는 클래스의 instance를 선언하고,
+// 무한 루프를 동작시킨다.
 int main(void) {
 
 	Menu menu;
 
+	// 사용자가 exit를 선택하지 않았으면 계속해서 동작시킨다.
 	while (!menu.checkExitBool()) {
 		menu.printMenu();
 	}
@@ -52,7 +80,6 @@ int main(void) {
 }
 
 /// 클래스 구현 ///
-
 Student::Student(string _name, string _address, string _ID, string _tel) {
 	this->name = _name;
 	this->address = _address;
@@ -64,6 +91,7 @@ Student::Student() {
 	// do nothing...
 }
 
+// 학생의 정보 출력
 void Student::showInfo() {
 	cout << "이름: " << this->name << endl;
 	cout << "주소: " << this->address << endl;
@@ -72,6 +100,7 @@ void Student::showInfo() {
 	cout << endl;
 }
 
+// 메뉴를 출력
 void Menu::printMenu() {
 	cout << "===========================" << endl;
 	cout << "추가: 1, 검색: 2, 삭제: 3, 모두보기: 4, 종료: 5" << endl;
@@ -103,6 +132,8 @@ void Menu::printMenu() {
 	}
 }
 
+// 학생을 map에 추가한다.
+// key는 학생의 이름으로 지정.
 void Menu::addStudent() {
 
 	string name;
@@ -126,16 +157,27 @@ void Menu::addStudent() {
 	list[name] = student;
 }
 
+// 학생을 검색한다.
 void Menu::searchStudent() {
 
 	string name;
 	cout << "검색할 학생의 이름을 입력하세요. : ";
 	getline(cin, name);
 
-	Student& std = list[name];
-	std.showInfo();
+	// 학생이 없을 수도 있으므로,
+	// find를 이용해 학생의 iterator를 얻고,
+	// iterator가 end라면 학생이 없는 경우이기 때문에
+	// 출력하지 않는다.
+	auto it = list.find(name);
+	if (it == list.end()) {
+		cout << name << " 학생이 없습니다." << endl;
+	} else {
+		(*it).second.showInfo();
+	}
 }
 
+// 학생을 제거한다.
+// map이므로, erase를 이용해 제거
 void Menu::deleteStudent() {
 
 	string name;
@@ -145,6 +187,7 @@ void Menu::deleteStudent() {
 	list.erase(name);
 }
 
+// 모든 학생 출력
 void Menu::printAllStudent() {
 
 	// map 구조이므로, 기본은 이름의 오름차순이다.
@@ -154,10 +197,12 @@ void Menu::printAllStudent() {
 	}
 }
 
+// 프로그램을 종료시킴.
 void Menu::exitProgram() {
 	this->exitCheck = true;
 }
 
+// 현재 exitCheck 상태를 return. 반복문의 condition에 사용.
 bool Menu::checkExitBool() {
 	return this->exitCheck;
 }

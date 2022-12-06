@@ -25,6 +25,8 @@ int main(void) {
 		years.push_back(year);
 	}
 
+	// find_if를 이용해서 years vector에 들어있는 연도가
+	// 윤년인지 판단한다. 삼항 연산자를 활용해 람다 함수를 find_if의 조건으로 넘긴다.
 	auto it = find_if(years.begin(), years.end(), [](int year) {
 		return (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) ? true : false;
 	});

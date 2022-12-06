@@ -2,6 +2,7 @@
 
 using namespace std;
 
+// Generic을 이용하여 template 함수를 정의한다.
 template<typename T>
 T getSmallest(T _list[], int _size) {
 	
@@ -9,6 +10,7 @@ T getSmallest(T _list[], int _size) {
 
 	// for문의 변수를 T로 설정하면 오류 발생...
 	// double이 들어온다면, double로 for문을 돌릴 수 없음.
+	// 따라서 auto로 반복변수를 선언. 가장 작은 값을 구한다.
 	for (auto i = 1; i < _size; i++) {
 
 		if (_list[i] < least) {

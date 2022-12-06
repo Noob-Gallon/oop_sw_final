@@ -37,6 +37,8 @@ public:
 	bool operator==(const Box& _other) const {
 		return (Volume() == _other.Volume());
 	}
+	// < operator overloading. Volume 메서드를 활용한다.
+	// 안정성을 위해 const 추가.
 	bool operator<(const Box& _other) const {
 		return (Volume() < _other.Volume());
 	}
@@ -57,6 +59,7 @@ void showBoxInfo(Box& box) {
 
 int main(void) {
 
+	// 비교에 활용할 세 객체 생성.
 	Box a(10, 10, 10), b(10, 10, 10), c;
 	c = a + b;
 
@@ -66,6 +69,7 @@ int main(void) {
 	showBoxInfo(b);
 	showBoxInfo(c);
 
+	// < overloaded method를 이용해 비교 수행.
 	cout << boolalpha;
 	cout << "a < b" << endl;
 	cout << (a < b) << endl;

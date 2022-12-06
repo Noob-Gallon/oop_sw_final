@@ -5,11 +5,13 @@ using namespace std;
 
 int main(void) {
 
+	// 입력받을 이름의 개수
 	int num;
 	cout << "얼마나 많은 이름을 입력 하시겠습니까? ";
 	cin >> num;
 	cin.ignore();
 
+	// 입력받은 수 만큼 string type 배열 동적할당
 	string* name_arr = new string[num];
 	string name;
 
@@ -26,6 +28,7 @@ int main(void) {
 		cout << name_arr[i] << endl;
 	}
 	
+	// 메모리 할당 해제
 	delete[] name_arr;
 	return 0;
 }

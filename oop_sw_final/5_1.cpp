@@ -5,16 +5,14 @@ using namespace std;
 class Shape {
 protected:
 	int x, y;
-	// x,y는 면적을 구하는데 사용될 수 있는 것이 아니므로(좌표라고 할 때)
-	// 각각의 class에서 필요한 멤버를 추가한다.
-	// interface는 멤버 변수를 가지지 않는 것이 좋지만,
-	// 이 문제에서는 예외적으로 처리한다...
-
-	// interface는 모든 경우에 public으로 처리한다.
-
+	
 public:
+	// 순수 가상 함수 getArea() 선언.
 	virtual double getArea() = 0;
 };
+
+// x,y는 면적을 구하는데 사용될 수 있는 것이 아니므로(좌표라고 할 때)
+// 각각의 class에서 면적을 구하기 위해 필요한 멤버를 추가한다.
 
 class Rect : public Shape {
 private:
@@ -28,6 +26,7 @@ public:
 		this->width = _w;
 		this->height = _h;
 	}
+	// getArea를 overriding해서 재정의한다.
 	double getArea() {
 		return width * height;
 	}
@@ -43,6 +42,7 @@ public:
 		this->y = _y;
 		this->radius = _r;
 	}
+	// getArea를 overriding해서 재정의한다.
 	double getArea() {
 		return 3.14 * radius * radius;
 	}
@@ -60,6 +60,7 @@ public:
 		this->width = _w;
 		this->height = _h;
 	}
+	// getArea를 overriding해서 재정의한다.
 	double getArea() {
 		return 0.5 * width * height;
 	}
@@ -71,7 +72,9 @@ int main(void) {
 	Circle circle(0, 0, 10);
 	Triangle triangle(0, 0, 10, 10);
 
-	// upcasting을 통해서 overriding된 메서드에 접근할 수 있음...
+	// Shape* 배열을 만들고 rect, circle, triangle의 주소를 가리키게 만들면
+	// upcasting을 통해서 overriding된 메서드 getArea()에 접근할 수 있음.
+	// getArea()는 virtual method이므로, 각각의 자식 클래스에서 정의된 getArea()가 불린다.
 	Shape* shape[3];
 	shape[0] = &rect;
 	shape[1] = &circle;

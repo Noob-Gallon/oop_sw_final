@@ -6,6 +6,8 @@ using namespace std;
 
 int main(void) {
 
+	// key : string, value : string인
+	// map dict를 생성한다.
 	map<string, string> dict;
 
 	string word;
@@ -22,6 +24,11 @@ int main(void) {
 		cin >> option;
 		cin.ignore();
 
+		// 1번 메뉴에서는
+		// dict에 단어를 추가한다.
+
+		// 사용자가 직접 추가한 단어를 통해 
+		// 퀴즈를 구성할 수 있도록 구성한다.
 		if (option == 1) {
 			cout << "추가할 단어 : ";
 			getline(cin, word);
@@ -33,7 +40,8 @@ int main(void) {
 		}
 		else if (option == 2) {
 
-			// map은 iterator를 구하면 key가 오름차순으로 나온다!
+			// map은 iterator를 구하면 key의 오름차순으로 iteration이 동작된다.
+			// 따라서, 오름차순으로 퀴즈를 낸다.
 			for (auto i = dict.begin(); i != dict.end(); i++) {
 
 				cout << "단어 : " << (*i).first << endl;
@@ -42,6 +50,10 @@ int main(void) {
 				string answer;
 				getline(cin, answer);
 
+				// map의 iterator는 주소이므로,
+				// dereferencing을 통해 객체를 참조하고
+				// first(key), second(value)이므로
+				// second를 통해 정답을 판별한다.
 				if ((*i).second == answer) {
 					cout << "맞췄습니다." << endl;
 				}

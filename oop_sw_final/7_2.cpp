@@ -9,6 +9,8 @@ int main(void) {
 	cout << "가위, 바위, 보 게임입니다." << endl;
 	cout << "무엇을 내시겠습니까?: ";
 	
+	// try catch를 이용하여 만약 입력된 string이
+	// 가위, 바위, 보가 아니라면 str을 throw한다.
 	try {
 		cin >> str;
 		

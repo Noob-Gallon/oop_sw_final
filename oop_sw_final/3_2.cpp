@@ -34,6 +34,9 @@ public:
 
 		return temp;
 	}
+	// 새롭게 추가된 operator overloading.
+	// 기존에 정의한 함수 Volume을 이용하여 두 객체의 부피 비교.
+	// 안정성을 위해 const 추가.
 	bool operator==(const Box& _other) const {
 		return (Volume() == _other.Volume());
 	}
@@ -54,6 +57,7 @@ void showBoxInfo(Box& box) {
 
 int main(void) {
 
+	// + operator overloading을 이용해서 세 객체 생성
 	Box a(10, 10, 10), b(10, 10, 10), c;
 	c = a + b;
 	
@@ -63,6 +67,7 @@ int main(void) {
 	showBoxInfo(b);
 	showBoxInfo(c);
 
+	// == overloading으로 비교.
 	cout << boolalpha;
 	cout << "a == b" << endl;
 	cout << (a == b) << endl;

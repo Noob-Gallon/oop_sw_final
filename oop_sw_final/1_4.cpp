@@ -17,6 +17,8 @@ public:
 		cout << "Destructor" << endl;
 		// 소멸자에서 특별히 지정해줄 것이 없으므로, 동작을 구현하지 않는다.
 	}
+
+	// getter, setter 정의
 	void setHour(int _h) {
 		this->hour = _h;
 	}
@@ -35,11 +37,15 @@ public:
 	int getSec() {
 		return sec;
 	}
+
+	// 시간을 출력하는 함수
 	void print() {
 		cout << "Time 객체: " << hour << ":" << min << ":" << sec << endl;
 	}
 };
 
+// isEqual을 overloading하므로, reference type 인자와
+// pointer type 인자 두 개의 함수를 만들어서 overloading 진행.
 bool isEqual(Time& t1, Time& t2) {
 	return (t1.getHour() == t2.getHour() &&
 		t1.getMin() == t2.getMin() &&
@@ -54,7 +60,7 @@ bool isEqual(Time* t1, Time* t2) {
 
 int main(void) {
 
-	// instances
+	// create instances
 	Time t1(12, 30, 30);
 	Time t2(12, 30, 30);
 	Time t3(12, 30, 15);
@@ -77,7 +83,8 @@ int main(void) {
 		cout << "시간이 다릅니다. - by reference" << endl;
 	}
 
-	// pointer
+	// pointer type overloading function checking...
+	// create instances
 	Time* ptr1 = &t1;
 	Time* ptr2 = &t2;
 	Time* ptr3 = &t3;

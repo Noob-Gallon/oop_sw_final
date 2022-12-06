@@ -2,12 +2,12 @@
 
 using namespace std;
 
+// Box 내에 friend 함수 printBox 선언.
 class Box {
 private:
 	double length;
 	double width;
 	double height;
-	friend void printBox(Box box);
 
 public:
 	Box(double l = 2.0, double w = 2.0, double h = 2.0) {
@@ -19,11 +19,12 @@ public:
 	double Volume() const {
 		return length * width * height;
 	}
-	// friend void printBox(Box box);
-	// friend 함수의 선언 위치는 크게 상관 없음?
+	friend void printBox(Box box);
 
 };
 
+// PrintBox method는 friend 함수이므로,
+// Box 클래스의 private member에 외부에서도 접근 가능하다.
 void printBox(Box box) {
 	
 	static int k = 1;

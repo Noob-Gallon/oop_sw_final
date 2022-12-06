@@ -2,6 +2,7 @@
 
 using namespace std;
 
+// 각각의 직업 클래스에 상속될 Person 클래스 정의.
 class Person {
 private:
 	int age;
@@ -26,6 +27,8 @@ public:
 	}
 };
 
+// Person 클래스를 상속받아서 myJob()을 재정의하고
+// teach 메서드를 추가로 정의한다.
 class Professor : public Person {
 public:
 	Professor(int _age) : Person(_age) {
@@ -38,6 +41,8 @@ public:
 	}
 };
 
+// Person 클래스를 상속받아서 myJob()을 재정의하고
+// playTennis 메서드를 추가로 정의한다.
 class TennisPlayer : public Person {
 public:
 	TennisPlayer(int _age) : Person(_age) {
@@ -50,11 +55,13 @@ public:
 	}
 };
 
+// Person 클래스를 상속받아서 myJob()을 재정의하고
+// runBusiness 메서드를 추가로 정의한다.
 class Businessman : public Person {
 public:
 	Businessman(int _age) : Person(_age) {
 	}
-	void runBusineses() {
+	void runBusiness() {
 		cout << "사업을 할 수 있음.\n";
 	}
 	void myJob() {

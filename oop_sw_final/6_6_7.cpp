@@ -4,6 +4,7 @@
 
 using namespace std;
 
+// 암호화를 하는 함수.
 void encoding(string str, int interval) {
 
 	ofstream os("file.txt");
@@ -15,8 +16,12 @@ void encoding(string str, int interval) {
 		interval = interval % 26;
 	}
 
+	// 입력할 스트링의 사이즈만큼 반복문을 돌린다.
 	int size = str.size();
 
+	// 주어진 알고리즘에 따라서, 암호화를 진행한다.
+	// 만약 Z보다 커진다면, 다시 A로 돌아가는 과정을
+	// 거친다.
 	for (int i = 0; i < size; i++) {
 
 		if (str[i] >= 'a' && str[i] <= 'z') {
@@ -38,6 +43,7 @@ void encoding(string str, int interval) {
 	os.close();
 }
 
+// 복호화를 하는 함수.
 void decoding(char interval) {
 
 	ifstream is("file.txt");
@@ -50,17 +56,18 @@ void decoding(char interval) {
 	// 스페이스를 처리하지 못한다는 한계가 있지만,
 	// 문제에서 스페이스의 처리를 요구하지 않으므로
 	// 스페이스 처리는 고려하지 않음.
+	// vector를 고려하면 처리할 수 있을 것이다.
 	is.seekg(0, ios::end);
 	int size = is.tellg();
 
 	char* str = new char[size]; // file의 내용 크기만큼 동적할당 arr를 만듦.
 	is.seekg(0, ios::beg); // 파일 포인터를 다시 처음 부분으로 돌려놓음.
 
-	// a 97 ~ z 122
-	// A 65 ~ z 90
-
 	char c;
 	int idx = 0;
+
+	// 파일에서 내용을 입력받고
+	// 복호화하는 과정을 거친다.
 	while (is >> c) {
 
 		if (c >= 'A' && c <= 'Z') {
@@ -80,8 +87,9 @@ void decoding(char interval) {
 		idx++;
 	}
 
-	cout << "\n\n\n";
+	cout << "\n\n\n복호화\n";
 
+	// 복호화된 내용을 출력한다.
 	for (int i = 0; i < size; i++) {
 		cout << str[i];
 	}
@@ -94,9 +102,6 @@ int main(void) {
 	cout << "원문 : ";
 	getline(cin, str);
 
-	// interval을 char로 설정하면 오류 발생?
-	// 예를 들어, 3을 넣으면 diff가 엄청 커지고,
-	// 10을 넣으면 0이 짤려서 1이 됨... 포인터 연산과 관련있음?
 	int interval;
 	cout << "이동거리 : ";
 	cin >> interval;

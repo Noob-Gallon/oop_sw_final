@@ -2,6 +2,8 @@
 
 using namespace std;
 
+// Point 클래스는 xval, yval 변수를 입력받음.
+// swap을 적용하기 위해 getter 생성.
 class Point {
 private:
 	double xval, yval;
@@ -26,6 +28,7 @@ public:
 	}
 };
 
+// 인자를 reference로 받아서 효율성 높임.
 void swap(Point& p1, Point& p2) {
 
 	double x = p1.getX();

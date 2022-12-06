@@ -27,10 +27,15 @@ public:
 	double getHeight() {
 		return height;
 	}
+	// + opeator overloading.
+	// 두 객체의 l, w, h를 더한 새 객체를 만들고,
+	// 이 객체를 return한다.
+	// 만약, Box&로 return하면 생성한 객체가 사라지므로
+	// 오류가 발생한다. 따라서 반드시 복사본으로 return한다.
 	Box operator+(const Box& _other) {
 		Box temp(length+_other.length,
 			width+_other.width,
-			height+_other.height);
+			height+_other.height); // 새로운 객체를 만드므로, constructor가 불림.
 
 		return temp;
 	}
@@ -38,6 +43,7 @@ public:
 
 void showBoxInfo(Box& box) {
 
+	// 생성된 상자의 개수를 세기 위해 함수 내에 static int 선언.
 	static int k = 1;
 
 	cout << "상자 #" << k << endl;
@@ -52,6 +58,8 @@ void showBoxInfo(Box& box) {
 int main(void) {
 
 	Box a(10, 10, 10), b(20, 20, 20), c;
+
+	// + overloading
 	c = a + b;
 	cout << endl;
 

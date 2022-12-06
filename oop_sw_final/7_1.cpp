@@ -7,6 +7,8 @@ int main(void) {
 	int num;
 	cin >> num;
 
+	// try, catch를 이용하여
+	// num이 음수가 될 경우 num을 throw한다.
 	try {
 		
 		if (num >= 0) {
